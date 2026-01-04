@@ -2,8 +2,8 @@ const NAV_CONFIG = {
   index: {
     brandHref: '#top',
     items: [
-      { key: 'features', label: 'Features', href: '#features' },
       { key: 'why', label: 'Why ApiCourier', href: '#why-apicourier' },
+      { key: 'features', label: 'Features', href: '#features' },
       { key: 'pricing', label: 'Pricing', href: '#pricing' },
       { key: 'faq', label: 'FAQ', href: '#faq' },
       { key: 'roadmap', label: 'Roadmap', href: 'roadmap.html' }
