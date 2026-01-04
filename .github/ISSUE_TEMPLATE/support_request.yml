@@ -1,0 +1,37 @@
+name: Support Request
+description: Get help for usage or setup questions.
+title: "[Support]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For community help, join Discord: https://discord.gg/apicourier
+        For private support, email support@apicourier.dev
+  - type: textarea
+    attributes:
+      label: Question
+      description: What do you need help with?
+      placeholder: "Describe the issue or question..."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What You've Tried
+      description: Steps or docs you've already checked.
+      placeholder: "I tried..."
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: App Version
+      placeholder: "e.g. 0.9.3-beta"
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: OS / Platform
+      placeholder: "e.g. Windows 11, macOS 14, Ubuntu 22.04"
+    validations:
+      required: false

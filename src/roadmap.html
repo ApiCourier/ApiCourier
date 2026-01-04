@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Roadmap - ApiCourier</title>
+  <meta name="title" content="ApiCourier Roadmap - What's Coming Next" />
+  <meta name="description" content="See what's in development and planned for ApiCourier. No dates, no pressure - just transparent development priorities." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apicourier.dev/roadmap" />
+  <meta property="og:title" content="ApiCourier Roadmap - Development Priorities" />
+  <meta property="og:description" content="Transparent look at ApiCourier's development priorities and upcoming features." />
+
+  <link rel="canonical" href="https://apicourier.dev/roadmap" />
+  <link rel="icon" type="image/png" href="images/apicourierlogo512.png" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="min-h-screen text-slate-100 antialiased">
+
+  <site-header data-page="roadmap"></site-header>
+
+  <main class="mx-auto flex max-w-7xl flex-col gap-16 px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+
+    <section class="text-center max-w-4xl mx-auto space-y-6 pt-8">
+      <div class="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-400">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+        Development Roadmap
+      </div>
+
+      <h1 class="text-4xl font-black tracking-tight text-slate-50 sm:text-5xl lg:text-6xl leading-tight">
+        Where ApiCourier is heading
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg text-slate-300 leading-relaxed">
+       Instead of promising dates we can't commit to, here's a transparent view of development priorities and what's being worked on.
+      </p>
+
+      <div class="glass-strong rounded-xl p-6 border border-slate-700/50 text-left max-w-2xl mx-auto">
+        <div class="flex items-start gap-3 text-sm text-slate-300">
+          <svg class="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <strong class="text-slate-100">About this roadmap:</strong> Features move between categories as priorities shift.
+            "In Progress" means active development. "Planned" means committed to building. "Under Consideration" means exploring feasibility.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto">
+      <div class="glass rounded-xl p-6 border border-slate-700/50">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-300 mb-4">Status Legend</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="flex items-center gap-2">
+            <span class="status-badge status-in-progress">
+              <span class="pulse-dot bg-emerald-400"></span>
+              In Progress
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="status-badge status-planned-near">
+              Planned - Near
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="status-badge status-planned-future">
+              Planned - Future
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="status-badge status-consideration">
+              Considering
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <div id="roadmap-sections" class="space-y-10"></div>
+
+    <!-- Feedback CTA -->
+    <section class="fade-in-section">
+      <div class="glass-strong rounded-2xl p-10 sm:p-12 border-2 border-apired/40 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 bg-apired/20 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+          <h2 class="text-3xl font-black text-slate-50 sm:text-4xl">
+            Have feedback on this roadmap?
+          </h2>
+          <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+            Priorities can shift based on user feedback. If you have strong opinions about what should be built first,
+            join the waitlist and let me know.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <site-cta data-href="index.html#waitlist" data-variant="gradient" data-text="Join the Waitlist"></site-cta>
+
+            <a href="https://github.com/apicourier/apicourier/discussions"
+               class="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-900 px-8 py-4 text-base font-semibold text-slate-200 hover:border-slate-400 hover:bg-slate-800 transition-all"
+               target="_blank"
+               rel="noopener noreferrer">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.088 3.292 9.395 7.865 10.923.575.11.785-.25.785-.556 0-.275-.01-1.007-.015-1.978-3.2.696-3.878-1.543-3.878-1.543-.523-1.33-1.277-1.684-1.277-1.684-1.043-.713.079-.699.079-.699 1.153.081 1.76 1.184 1.76 1.184 1.026 1.758 2.691 1.251 3.347.958.103-.744.402-1.252.732-1.54-2.554-.29-5.236-1.277-5.236-5.683 0-1.255.448-2.28 1.183-3.084-.119-.29-.513-1.459.112-3.04 0 0 .965-.309 3.162 1.178a10.98 10.98 0 0 1 2.879-.387c.977.004 1.962.132 2.88.387 2.196-1.487 3.16-1.178 3.16-1.178.626 1.581.232 2.75.114 3.04.737.804 1.182 1.829 1.182 3.084 0 4.418-2.687 5.389-5.25 5.673.414.357.783 1.06.783 2.137 0 1.543-.014 2.784-.014 3.164 0 .309.207.672.79.556C20.21 21.39 23.5 17.084 23.5 12 23.5 5.648 18.352.5 12 .5Z" />
+              </svg>
+              Share Your Thoughts
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer data-page="roadmap" data-discord="https://discord.gg/PCAjVpaJGu"></site-footer>
+
+  <script src="js/components.js" type="module"></script>
+  <script src="js/roadmap.js" type="module"></script>
+
+</body>
+</html>

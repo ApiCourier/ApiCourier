@@ -1,0 +1,82 @@
+name: Bug Report
+description: Report a problem or unexpected behavior.
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: checkboxes
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues to avoid duplicates.
+          required: true
+        - label: I can reproduce this consistently.
+          required: false
+  - type: textarea
+    attributes:
+      label: Summary
+      description: Short, clear description of the issue.
+      placeholder: "When I run X, Y happens instead of Z."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps to reproduce the issue.
+      placeholder: "1. Open ...\n2. Click ...\n3. See error ..."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      placeholder: "What you expected to happen."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      placeholder: "What actually happened."
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Impact
+      description: How much does this block your work?
+      options:
+        - Low (minor annoyance)
+        - Medium (workaround exists)
+        - High (blocks core workflow)
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: App Version
+      placeholder: "e.g. 0.9.3-beta"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OS / Platform
+      placeholder: "e.g. Windows 11, macOS 14, Ubuntu 22.04"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Install Method
+      placeholder: "e.g. MSIX, MSI, portable zip, dev build"
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Logs and Screenshots
+      description: Attach any relevant logs, screenshots, or screen recordings. If logs are large, paste a snippet.
+      placeholder: "Logs path, relevant stack trace, or images."
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Anything else that might help debug the issue.
+    validations:
+      required: false
