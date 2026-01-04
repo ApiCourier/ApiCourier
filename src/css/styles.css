@@ -143,3 +143,71 @@ html {
   from, to { border-color: transparent; }
   50% { border-color: #E63946; }
 }
+
+.emailoctopus-form-wrapper {
+  margin-top: 16px;
+}
+
+.emailoctopus-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.emailoctopus-form .main-form {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.emailoctopus-form input[type="email"] {
+  flex: 1 1 240px;
+  min-width: 220px;
+  height: 52px;
+  border-radius: 999px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 0 24px;
+  color: #f8fafc;
+}
+
+.emailoctopus-form input[type="email"]::placeholder {
+  color: #64748b;
+}
+
+.emailoctopus-form input[type="email"]:focus {
+  border-color: #E63946;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
+}
+
+.emailoctopus-form input[type="submit"] {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #E63946, #dc2626);
+  color: #fff;
+  height: 52px;
+  padding: 0 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.emailoctopus-form input[type="submit"]:hover {
+  box-shadow: 0 12px 24px rgba(230, 57, 70, 0.35);
+  transform: translateY(-1px);
+}
+
+.emailoctopus-success-message,
+.emailoctopus-error-message {
+  margin: 12px auto 0;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.emailoctopus-error-message {
+  color: #f87171;
+}

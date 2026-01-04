@@ -303,43 +303,7 @@ class SiteWaitlist extends HTMLElement {
             </p>
           </div>
 
-          <form
-            method="post"
-            action="https://emailoctopus.com/lists/52b1fbb6-dcf7-11f0-8ede-c96fe6112646/members/embedded/add"
-            class="emailoctopus-form flex flex-col gap-4 sm:flex-row sm:items-center justify-center max-w-xl mx-auto"
-            data-message-success="Thanks for joining! Check your email for confirmation."
-            data-message-error="There was an error. Please try again or contact us directly.">
-
-            <input
-              type="email"
-              name="email_address"
-              id="email_address"
-              placeholder="your.email@company.com"
-              required
-              class="flex-1 rounded-full bg-slate-900 border border-slate-700 px-6 py-4 text-slate-100 placeholder-slate-500 focus:border-apired focus:outline-none focus:ring-2 focus:ring-apired/50 transition-all"
-            />
-
-            <div class="emailoctopus-form-row-hp" aria-label="Please leave the following field empty" style="position: absolute; left: -5000px;">
-              <input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="nope" />
-            </div>
-
-            <button
-              type="submit"
-              class="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-apired to-red-600 px-8 py-4 text-base font-bold text-white shadow-xl hover:shadow-apired/50 transition-all glow-red">
-              Join Waitlist
-              <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-          </form>
-
-          <div class="emailoctopus-form-row-success rounded-xl bg-emerald-500/10 border border-emerald-500/30 px-6 py-4 text-emerald-400" style="display: none;">
-            <p><strong>You're on the list!</strong> Check your email for confirmation.</p>
-          </div>
-
-          <div class="emailoctopus-form-row-error rounded-xl bg-red-500/10 border border-red-500/30 px-6 py-4 text-red-400" style="display: none;">
-            <p><strong>Oops!</strong> <span class="emailoctopus-error-message"></span></p>
-          </div>
+          <div class="max-w-xl mx-auto" id="waitlist-embed"></div>
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-400 pt-4">
             <div class="flex items-center">
@@ -352,6 +316,16 @@ class SiteWaitlist extends HTMLElement {
         </div>
       </div>
     `;
+
+    const embedHost = this.querySelector('#waitlist-embed');
+    if (embedHost) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://eomail5.com/form/86b619ea-e99c-11f0-9a7d-4f2173c7dfa7.js';
+      script.dataset.form = '86b619ea-e99c-11f0-9a7d-4f2173c7dfa7';
+      embedHost.appendChild(script);
+
+    }
   }
 }
 
