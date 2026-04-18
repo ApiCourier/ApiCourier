@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Changelog - ApiCourier</title>
+  <meta name="title" content="ApiCourier Changelog" />
+  <meta name="description" content="Track ApiCourier releases, fixes, and feature updates." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apicourier.dev/changelog" />
+  <meta property="og:title" content="Changelog - ApiCourier" />
+  <meta property="og:description" content="Track ApiCourier releases, fixes, and feature updates." />
+  <meta property="og:image" content="https://apicourier.dev/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Changelog - ApiCourier" />
+  <meta property="twitter:description" content="Track ApiCourier releases, fixes, and feature updates." />
+  <meta property="twitter:image" content="https://apicourier.dev/og-image.png" />
+
+  <link rel="canonical" href="https://apicourier.dev/changelog" />
+  <link rel="icon" type="image/png" href="images/apicourierlogo512.png" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="min-h-screen text-slate-100 antialiased">
+
+  <site-header data-page="changelog"></site-header>
+
+  <main class="mx-auto flex max-w-7xl flex-col gap-16 px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+
+    <section class="text-center max-w-4xl mx-auto space-y-6 pt-8">
+      <div class="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-purple-400">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+        </svg>
+        Changelog
+      </div>
+
+      <h1 class="text-4xl font-black tracking-tight text-slate-50 sm:text-5xl lg:text-6xl leading-tight">
+        Progress you can track
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg text-slate-300 leading-relaxed">
+        ApiCourier is in active development. Major milestones and release notes will appear here as we ship.
+      </p>
+    </section>
+
+    <section class="fade-in-section max-w-4xl mx-auto space-y-8">
+
+      <div class="glass-strong rounded-2xl border border-emerald-500/20 p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-400">Beta</span>
+          <h2 class="text-xl font-bold text-slate-50">April 2026 - Beta Milestone</h2>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Major expansion of protocol support and cross-platform readiness.</p>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> macOS support in active beta (Universal binary: Intel + Apple Silicon)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> WebSocket client with full-duplex messaging and connection management</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> gRPC client with server reflection and protobuf support</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Image preview in response viewer</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Keybinding service improvements and customization</li>
+          <li class="flex items-start gap-2"><span class="text-sky-400 font-bold mt-0.5">~</span> macOS-specific path handling and build fixes</li>
+          <li class="flex items-start gap-2"><span class="text-sky-400 font-bold mt-0.5">~</span> Trimmed assemblies for faster startup and smaller install</li>
+        </ul>
+      </div>
+
+      <div class="glass-strong rounded-2xl border border-emerald-500/20 p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-400">Beta</span>
+          <h2 class="text-xl font-bold text-slate-50">March 2026 - Feature Expansion</h2>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Core feature set buildout with scripting, import, and execution capabilities.</p>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> GraphQL support with schema introspection</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Flow Runner with sequential execution, branching, and retries</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> CLI tool (<code class="text-xs bg-slate-800 px-1 rounded">apicourier</code>) with request runner, JUnit XML, and JSON reporters</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Code generation (C#, JavaScript, Python, cURL)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Bruno (.bru) and cURL import capabilities</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Autocomplete for URLs and headers</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Middleware pipeline for request execution</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Local persistence layer</li>
+        </ul>
+      </div>
+
+      <div class="glass-strong rounded-2xl border border-slate-700/50 p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full bg-slate-500/10 border border-slate-500/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Foundation</span>
+          <h2 class="text-xl font-bold text-slate-50">Earlier 2026 - Foundation</h2>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Initial feature set establishing the Git-native, offline-first API client.</p>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Core HTTP client with all methods, headers, and auth (Bearer, Basic, API Key, OAuth2)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Git integration (CLI + UI) with commit, branch context, status panel, and file watching</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> OpenAPI 3.0/3.1 and Swagger 2.0 import</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Postman collection import (v2.0/v2.1)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> JavaScript scripting (ClearScript V8, Postman-compatible API)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> C# scripting (Roslyn-based with LINQ, records, pattern matching)</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> Full environment management with variable substitution</li>
+          <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold mt-0.5">+</span> YAML-based Git-native collection storage</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="fade-in-section max-w-4xl mx-auto">
+      <div class="glass-strong rounded-2xl border border-slate-700/50 p-8 text-center">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-400">Want release updates?</h3>
+        <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+          Join the waitlist to get notified when new builds ship.
+        </p>
+        <div class="mt-4">
+          <site-cta data-href="/#waitlist" data-variant="gradient" data-text="Join the Waitlist"></site-cta>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer data-page="changelog"></site-footer>
+
+  <script src="js/components.js" type="module"></script>
+
+</body>
+</html>

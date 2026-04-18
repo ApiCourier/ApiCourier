@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Third-Party Notices - ApiCourier</title>
+  <meta name="title" content="ApiCourier Third-Party Notices" />
+  <meta name="description" content="Third-party open source notices and license attributions for ApiCourier." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apicourier.dev/third-party-notices" />
+  <meta property="og:title" content="Third-Party Notices - ApiCourier" />
+  <meta property="og:description" content="Third-party open source notices and license attributions for ApiCourier." />
+  <meta property="og:image" content="https://apicourier.dev/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Third-Party Notices - ApiCourier" />
+  <meta property="twitter:description" content="Third-party open source notices and license attributions for ApiCourier." />
+  <meta property="twitter:image" content="https://apicourier.dev/og-image.png" />
+
+  <link rel="canonical" href="https://apicourier.dev/third-party-notices" />
+  <link rel="icon" type="image/png" href="images/apicourierlogo512.png" />
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .license-table-wrap {
+      overflow-x: auto;
+      border-radius: 0.9rem;
+      border: 1px solid rgb(51 65 85 / 0.75);
+      background: rgb(2 6 23 / 0.35);
+    }
+
+    .license-table {
+      width: 100%;
+      min-width: 1280px;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: rgb(203 213 225);
+    }
+
+    .license-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: rgb(15 23 42 / 0.98);
+      color: rgb(226 232 240);
+      text-align: left;
+      padding: 0.7rem;
+      border-bottom: 1px solid rgb(51 65 85);
+      white-space: nowrap;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .license-table td {
+      padding: 0.7rem;
+      border-bottom: 1px solid rgb(30 41 59 / 0.8);
+      vertical-align: top;
+      word-break: break-word;
+    }
+
+    .license-table th:nth-child(3),
+    .license-table td:nth-child(3) {
+      min-width: 8.5rem;
+      white-space: normal;
+    }
+
+    .license-table th:nth-child(8),
+    .license-table td:nth-child(8) {
+      min-width: 15rem;
+      width: 15rem;
+      white-space: normal;
+    }
+
+    .license-table td:nth-child(8) a {
+      display: block;
+      max-width: 100%;
+      white-space: normal !important;
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+
+    .license-table tbody tr:hover {
+      background: rgb(30 41 59 / 0.5);
+    }
+
+    .license-link {
+      color: rgb(248 113 113);
+      text-decoration: none;
+    }
+
+    .license-link:hover {
+      color: rgb(252 165 165);
+      text-decoration: underline;
+    }
+
+    .license-text-preview {
+      color: rgb(148 163 184);
+    }
+
+    .license-text-details {
+      margin-top: 0.4rem;
+    }
+
+    .license-text-details summary {
+      cursor: pointer;
+      color: rgb(248 113 113);
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .license-text-details summary:hover {
+      color: rgb(252 165 165);
+    }
+
+    .license-text-block {
+      margin-top: 0.5rem;
+      max-height: 20rem;
+      overflow: auto;
+      border-radius: 0.6rem;
+      border: 1px solid rgb(51 65 85 / 0.7);
+      background: rgb(2 6 23 / 0.65);
+      padding: 0.6rem;
+      white-space: pre-wrap;
+      color: rgb(203 213 225);
+      font-size: 0.75rem;
+    }
+
+    .license-meta-grid {
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    .license-meta-card {
+      border: 1px solid rgb(51 65 85 / 0.6);
+      border-radius: 0.8rem;
+      background: rgb(2 6 23 / 0.45);
+      padding: 0.9rem;
+    }
+
+    .license-meta-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgb(148 163 184);
+      margin-bottom: 0.35rem;
+    }
+
+    .license-meta-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgb(241 245 249);
+    }
+
+    #license-loading,
+    #license-empty,
+    #license-error {
+      border-radius: 0.9rem;
+      border: 1px solid rgb(51 65 85 / 0.7);
+      background: rgb(2 6 23 / 0.45);
+      color: rgb(148 163 184);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    #license-error {
+      border-color: rgb(127 29 29 / 0.7);
+      background: rgb(127 29 29 / 0.15);
+      color: rgb(254 202 202);
+    }
+
+    .is-hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen text-slate-100 antialiased">
+  <site-header data-page="third-party-notices"></site-header>
+
+  <main class="mx-auto flex max-w-7xl flex-col gap-12 px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+    <section class="text-center max-w-3xl mx-auto space-y-6 pt-8">
+      <div class="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red-400">
+        Third-Party Notices
+      </div>
+
+      <h1 class="text-4xl font-black tracking-tight text-slate-50 sm:text-5xl lg:text-6xl leading-tight">
+        Third-Party Notices
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg text-slate-300 leading-relaxed">
+        Effective date: March 13, 2026. Last updated: March 13, 2026.
+      </p>
+    </section>
+
+    <section class="fade-in-section space-y-5">
+      <div class="glass-strong rounded-2xl border border-slate-700/50 p-6 text-sm text-slate-300 leading-relaxed">
+        This page renders a sanitized third-party license dataset as a readable HTML table with searchable packages and expandable license text.
+      </div>
+
+      <div class="glass-strong rounded-2xl border border-slate-700/50 p-6 space-y-4">
+        <div class="license-meta-grid" id="license-meta"></div>
+
+        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <label class="w-full md:max-w-lg">
+            <span class="mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-400">Search packages</span>
+            <input
+              id="license-search"
+              type="search"
+              placeholder="Search package, version, author, or license text"
+              class="w-full rounded-lg border border-slate-600 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 outline-none focus:border-red-400"
+              autocomplete="off"
+            />
+          </label>
+          <div class="text-xs text-slate-400" id="license-match-count"></div>
+        </div>
+      </div>
+
+      <div id="license-loading">Loading third-party license data...</div>
+      <div id="license-error" class="is-hidden"></div>
+      <div id="license-empty" class="is-hidden">No license rows were found in the markdown table.</div>
+
+      <div class="license-table-wrap is-hidden" id="license-table-wrap">
+        <table class="license-table">
+          <thead id="license-table-head"></thead>
+          <tbody id="license-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <site-footer data-page="third-party-notices"></site-footer>
+
+  <script src="js/components.js" type="module"></script>
+  <script src="js/third-party-notices.js" type="module"></script>
+</body>
+</html>

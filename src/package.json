@@ -1,0 +1,8 @@
+{
+  "name": "apicourier-site",
+  "private": true,
+  "scripts": {
+    "serve": "node serve.js",
+    "sitemap": "node generate-sitemap.js"
+  }
+}

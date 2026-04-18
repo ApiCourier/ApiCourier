@@ -144,6 +144,38 @@ html {
   50% { border-color: #E63946; }
 }
 
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-github-btn {
+  background: rgba(15, 23, 42, 0.56);
+}
+
+.hero-cta-note {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .hero-shot-column {
+    padding-top: 22px;
+  }
+}
+
 .emailoctopus-form-wrapper {
   margin-top: 16px;
 }
@@ -210,4 +242,316 @@ html {
 
 .emailoctopus-error-message {
   color: #f87171;
+}
+
+.checkout-shell {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(2, 6, 23, 0.55);
+}
+
+.checkout-headline {
+  text-align: left;
+}
+
+.checkout-modal-open {
+  overflow: hidden;
+}
+
+.checkout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(2, 6, 23, 0.75);
+}
+
+.checkout-modal.is-open {
+  display: flex;
+}
+
+.checkout-modal-card {
+  width: min(100%, 560px);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.97);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  padding: 20px;
+}
+
+.checkout-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.checkout-close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #475569;
+  border-radius: 999px;
+  color: #cbd5e1;
+  background: #0f172a;
+  cursor: pointer;
+}
+
+.checkout-close:hover {
+  border-color: #94a3b8;
+  color: #f8fafc;
+}
+
+.checkout-form {
+  display: grid;
+  gap: 10px;
+}
+
+.checkout-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #cbd5e1;
+}
+
+.checkout-input {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 0 14px;
+}
+
+.checkout-input:focus {
+  border-color: #E63946;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.35);
+}
+
+.checkout-submit {
+  margin-top: 6px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #E63946, #dc2626);
+  color: #fff;
+  height: 52px;
+  padding: 0 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.checkout-submit:hover {
+  box-shadow: 0 12px 24px rgba(230, 57, 70, 0.35);
+  transform: translateY(-1px);
+}
+
+.checkout-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+  transform: none;
+}
+
+.checkout-status {
+  min-height: 20px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.checkout-form .cf-turnstile {
+  margin-top: 6px;
+}
+
+#index-pricing-cards {
+  align-items: stretch;
+}
+
+#index-pricing-cards .pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#index-pricing-cards .pricing-card-features {
+  flex: 1 1 auto;
+}
+
+#index-pricing-cards .pricing-card-cta {
+  margin-top: auto;
+}
+
+.app-shot-stack {
+  position: relative;
+  width: 100%;
+  min-height: clamp(400px, 66vw, 700px);
+}
+
+.app-shot-card {
+  position: absolute;
+  width: min(98%, 860px);
+  aspect-ratio: 1080 / 704;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(15, 23, 42, 0.95);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.app-shot-front {
+  z-index: 2;
+  left: 0;
+  top: 0;
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.56);
+}
+
+.app-shot-back {
+  z-index: 1;
+  left: 36%;
+  top: 44px;
+  opacity: 0.96;
+  box-shadow: 0 22px 46px rgba(2, 6, 23, 0.44);
+}
+
+@media (max-width: 1023px) {
+  .app-shot-stack {
+    min-height: clamp(320px, 74vw, 520px);
+  }
+
+  .app-shot-card {
+    width: min(94%, 680px);
+  }
+
+  .app-shot-front {
+    left: 0;
+    top: 0;
+  }
+
+  .app-shot-back {
+    left: 32%;
+    top: 34px;
+  }
+}
+
+@media (max-width: 639px) {
+  .app-shot-stack {
+    min-height: 260px;
+  }
+
+  .app-shot-card {
+    width: 95%;
+  }
+
+  .app-shot-front {
+    left: 0;
+    top: 0;
+  }
+
+  .app-shot-back {
+    left: 18%;
+    top: 24px;
+    opacity: 0.72;
+  }
+
+}
+
+.workflow-shot-shell {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  overflow: hidden;
+  background: rgba(2, 6, 23, 0.65);
+}
+
+.workflow-shot-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.workflow-step-card {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.workflow-step-card:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.9);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+
+.workflow-step-card .glass {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.workflow-step-card:hover .glass {
+  transform: translateY(-2px);
+  border-color: rgba(148, 163, 184, 0.58);
+}
+
+.workflow-step-terminal {
+  min-height: 110px;
+}
+
+.workflow-step-card.is-active .glass {
+  border-color: rgba(230, 57, 70, 0.52);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.34);
+}
+
+.workflow-step-card.is-active .workflow-step-badge {
+  box-shadow: 0 0 0 3px rgba(226, 232, 240, 0.2), 0 10px 18px rgba(2, 6, 23, 0.45);
+}
+
+.workflow-demo-shell {
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(2, 6, 23, 0.68);
+  overflow: hidden;
+}
+
+.workflow-demo-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+.workflow-demo-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.workflow-demo-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.52);
+}
+
+.workflow-demo-label {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.workflow-demo-frame {
+  background: rgba(2, 6, 23, 0.76);
+}
+
+.workflow-demo-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
 }

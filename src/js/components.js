@@ -1,3 +1,18 @@
+import { getRuntimeConfig } from './runtime-config.js';
+
+const runtimeConfig = getRuntimeConfig();
+
+const SECONDARY_NAV = {
+  brandHref: '/',
+  items: [
+    { key: 'features', label: 'Features', href: '/#features' },
+    { key: 'pricing', label: 'Pricing', href: '/#pricing' },
+    { key: 'roadmap', label: 'Roadmap', href: '/roadmap' },
+    { key: 'contact', label: 'Contact', href: '/contact' }
+  ],
+  ctaHref: '/#waitlist'
+};
+
 const NAV_CONFIG = {
   index: {
     brandHref: '#top',
@@ -6,29 +21,26 @@ const NAV_CONFIG = {
       { key: 'features', label: 'Features', href: '#features' },
       { key: 'pricing', label: 'Pricing', href: '#pricing' },
       { key: 'faq', label: 'FAQ', href: '#faq' },
-      { key: 'roadmap', label: 'Roadmap', href: 'roadmap.html' }
+      { key: 'roadmap', label: 'Roadmap', href: '/roadmap' }
     ],
     ctaHref: '#waitlist'
   },
-  contact: {
-    brandHref: 'index.html',
-    items: [
-      { key: 'features', label: 'Features', href: 'index.html#features' },
-      { key: 'pricing', label: 'Pricing', href: 'index.html#pricing' },
-      { key: 'roadmap', label: 'Roadmap', href: 'roadmap.html' },
-      { key: 'contact', label: 'Contact', href: 'contact.html' }
-    ],
-    ctaHref: 'index.html#waitlist'
-  },
+  contact: SECONDARY_NAV,
   roadmap: {
-    brandHref: 'index.html',
+    brandHref: '/',
     items: [
-      { key: 'features', label: 'Features', href: 'index.html#features' },
-      { key: 'pricing', label: 'Pricing', href: 'index.html#pricing' },
-      { key: 'roadmap', label: 'Roadmap', href: 'roadmap.html' }
+      { key: 'features', label: 'Features', href: '/#features' },
+      { key: 'pricing', label: 'Pricing', href: '/#pricing' },
+      { key: 'roadmap', label: 'Roadmap', href: '/roadmap' }
     ],
-    ctaHref: 'index.html#waitlist'
-  }
+    ctaHref: '/#waitlist'
+  },
+  support: SECONDARY_NAV,
+  changelog: SECONDARY_NAV,
+  privacy: SECONDARY_NAV,
+  terms: SECONDARY_NAV,
+  license: SECONDARY_NAV,
+  'third-party-notices': SECONDARY_NAV
 };
 
 const DEFAULT_PAGE = 'index';
@@ -81,7 +93,7 @@ class SiteHeader extends HTMLElement {
             <img src="images/apicourierlogo.svg" alt="ApiCourier Logo" class="h-10 w-10 transition-all duration-300 group-hover:drop-shadow-lg group-hover:drop-shadow-apired/50" />
             <div class="flex flex-col leading-tight">
               <span class="text-base font-bold tracking-wide">ApiCourier</span>
-              <span class="text-[10px] text-slate-400 font-medium">Git-Native - Offline-First</span>
+              <span class="text-[10px] text-slate-400 font-medium">C# &middot; Git-Native &middot; Offline-First</span>
             </div>
           </a>
 
@@ -166,14 +178,13 @@ class SiteFooter extends HTMLElement {
       { key: 'pricing', label: 'Pricing', href: `${base}#pricing` },
       { key: 'faq', label: 'FAQ', href: `${base}#faq` },
       { key: 'roadmap', label: 'Roadmap', href: 'roadmap.html' },
-      { key: 'changelog', label: 'Changelog', href: '#' }
+      { key: 'changelog', label: 'Changelog', href: 'changelog.html' }
     ];
 
     const resourceLinks = [
-      { key: 'docs', label: 'Documentation', href: '#' },
+      { key: 'docs', label: 'Documentation', href: 'https://docs.apicourier.dev' },
       { key: 'github', label: 'GitHub', href: 'https://github.com/apicourier/apicourier' },
-      { key: 'blog', label: 'Blog', href: '#' },
-      { key: 'support', label: 'Support', href: '#' },
+      { key: 'support', label: 'Support', href: 'support.html' },
       { key: 'contact', label: 'Contact', href: 'contact.html' }
     ];
 
@@ -196,13 +207,13 @@ class SiteFooter extends HTMLElement {
               <div class="flex items-center gap-3 mb-4">
                 <img src="images/apicourierlogo.svg" alt="ApiCourier Logo" class="h-10 w-10" />
                 <div class="flex flex-col leading-tight">
-                  <span class="text-base font-bold tracking-wide text-slate-200">ApiCourier</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Git-Native - Offline-First</span>
+                  <span class="text-base font-bold tracking-wide text-slate-200">ApiCourier LLC</span>
+                  <span class="text-[10px] text-slate-500 font-medium">C# &middot; Git-Native &middot; Offline-First</span>
                 </div>
               </div>
               <p class="text-sm text-slate-400 max-w-md leading-relaxed">
-                The developer-first API client that stores everything in Git-native YAML.
-                Build, test, and ship APIs without vendor lock-in.
+                The API client that speaks C# and tests your database.
+                NuGet scripting, DB assertions, and a smart mock gateway. Built for .NET teams.
               </p>
               <div class="flex items-center gap-4 mt-6">
                 <a href="https://github.com/apicourier/apicourier"
@@ -242,11 +253,12 @@ class SiteFooter extends HTMLElement {
           </div>
 
           <div class="border-t border-slate-800 py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
-            <p>&copy; <span id="year"></span> ApiCourier. Built by developers, for developers.</p>
+            <p>&copy; <span id="year"></span> ApiCourier LLC. Built by developers, for developers.</p>
             <div class="flex flex-wrap gap-6">
-              <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-              <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
-              <a href="#" class="hover:text-slate-300 transition-colors">License</a>
+              <a href="/privacy" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+              <a href="/terms" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+              <a href="/license" class="hover:text-slate-300 transition-colors">License</a>
+              <a href="/third-party-notices" class="hover:text-slate-300 transition-colors">Third-Party Notices</a>
             </div>
           </div>
         </div>
@@ -288,6 +300,57 @@ customElements.define('site-cta', SiteCta);
 
 class SiteWaitlist extends HTMLElement {
   connectedCallback() {
+    const stripeCheckoutEnabled = runtimeConfig.featureFlags.stripeCheckout;
+    const checkoutModalMarkup = stripeCheckoutEnabled
+      ? `
+          <div id="purchase"></div>
+
+          <div id="checkout-modal" class="checkout-modal" aria-hidden="true">
+            <div class="checkout-modal-card" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+              <div class="checkout-modal-header">
+                <h3 id="checkout-modal-title" class="text-xl font-bold text-slate-50">Purchase Pro</h3>
+                <button id="checkout-close" type="button" class="checkout-close" aria-label="Close checkout">x</button>
+              </div>
+              <p class="text-sm text-slate-300">
+                Pro is focused on advanced workflows: advanced Git UI, advanced Flow Runner, priority support, and advanced data tooling.
+              </p>
+              <p class="text-xs text-slate-400 mt-2">
+                Enter your email, pick a billing cycle, complete the Turnstile check, and continue to Stripe.
+              </p>
+
+              <form id="checkout-form" class="checkout-form mt-4" novalidate>
+                <input type="hidden" name="tier" value="Pro" />
+
+                <label class="checkout-label" for="checkout-email">Email</label>
+                <input
+                  id="checkout-email"
+                  class="checkout-input"
+                  type="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  autocomplete="email"
+                  required
+                />
+
+                <label class="checkout-label" for="checkout-duration">Billing cycle</label>
+                <select id="checkout-duration" class="checkout-input" name="durationDays" required>
+                  <option value="365" selected>Annual - $50/year (save 17%)</option>
+                  <option value="30">Monthly - $5/month</option>
+                </select>
+
+                <div id="checkout-turnstile"></div>
+
+                <button id="checkout-submit" type="submit" class="checkout-submit">
+                  Continue Purchase
+                </button>
+
+                <p id="checkout-status" class="checkout-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        `
+      : '<div id="purchase"></div>';
+
     this.innerHTML = `
       <div class="glass-strong rounded-2xl p-10 sm:p-16 border-2 border-apired/40 text-center relative overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 bg-apired/20 rounded-full blur-3xl"></div>
@@ -299,18 +362,20 @@ class SiteWaitlist extends HTMLElement {
             </h2>
             <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
               Be among the first to experience Git-native API development.
-              Early access members get Pro features free during beta.
+              Insider members get full access as features ship during beta and are guaranteed 12 months of Pro at 1.0 launch.
             </p>
           </div>
 
           <div class="max-w-xl mx-auto" id="waitlist-embed"></div>
+
+          ${checkoutModalMarkup}
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-400 pt-4">
             <div class="flex items-center">
               <svg class="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Early access in 2026</span>
+              <span>Early access available now</span>
             </div>
           </div>
         </div>
@@ -325,6 +390,162 @@ class SiteWaitlist extends HTMLElement {
       script.dataset.form = '86b619ea-e99c-11f0-9a7d-4f2173c7dfa7';
       embedHost.appendChild(script);
 
+    }
+
+    const checkoutModal = this.querySelector('#checkout-modal');
+    if (checkoutModal) {
+      document.body.appendChild(checkoutModal);
+    }
+
+    const checkoutCloseButton = checkoutModal ? checkoutModal.querySelector('#checkout-close') : null;
+    const checkoutForm = checkoutModal ? checkoutModal.querySelector('#checkout-form') : null;
+    const submitButton = checkoutModal ? checkoutModal.querySelector('#checkout-submit') : null;
+    const statusNode = checkoutModal ? checkoutModal.querySelector('#checkout-status') : null;
+    const emailInput = checkoutModal ? checkoutModal.querySelector('#checkout-email') : null;
+    const durationInput = checkoutModal ? checkoutModal.querySelector('#checkout-duration') : null;
+    const turnstileHost = checkoutModal ? checkoutModal.querySelector('#checkout-turnstile') : null;
+    const turnstileSiteKey = '0x4AAAAAACYrJjdw3pMmUqbM';
+    let turnstileWidgetId = null;
+
+    const isCheckoutModalReady = checkoutModal && checkoutCloseButton && checkoutForm && submitButton && statusNode && emailInput && durationInput && turnstileHost;
+
+    if (isCheckoutModalReady) {
+      const ensureTurnstile = () => {
+        if (!window.turnstile || turnstileWidgetId !== null) {
+          return;
+        }
+        turnstileWidgetId = window.turnstile.render(turnstileHost, {
+          sitekey: turnstileSiteKey
+        });
+      };
+
+      const openCheckoutModal = () => {
+        ensureTurnstile();
+        checkoutModal.classList.add('is-open');
+        checkoutModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('checkout-modal-open');
+        statusNode.textContent = '';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Continue Purchase';
+        emailInput.focus();
+        if (window.turnstile && turnstileWidgetId !== null) {
+          window.turnstile.reset(turnstileWidgetId);
+        }
+      };
+
+      const closeCheckoutModal = () => {
+        checkoutModal.classList.remove('is-open');
+        checkoutModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('checkout-modal-open');
+      };
+
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) {
+          return;
+        }
+        const link = target.closest('a[href="#purchase"]');
+        if (!link) {
+          return;
+        }
+        event.preventDefault();
+        openCheckoutModal();
+      });
+      checkoutCloseButton.addEventListener('click', closeCheckoutModal);
+      checkoutModal.addEventListener('click', (event) => {
+        if (event.target === checkoutModal) {
+          closeCheckoutModal();
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && checkoutModal.classList.contains('is-open')) {
+          closeCheckoutModal();
+        }
+      });
+
+      checkoutForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!emailInput.value.trim()) {
+          statusNode.textContent = 'Enter an email address to continue.';
+          emailInput.focus();
+          return;
+        }
+
+        if (!emailInput.checkValidity()) {
+          statusNode.textContent = 'Enter a valid email address to continue.';
+          emailInput.reportValidity();
+          return;
+        }
+
+        const token = turnstileWidgetId !== null && window.turnstile
+          ? window.turnstile.getResponse(turnstileWidgetId)
+          : '';
+        if (!token) {
+          statusNode.textContent = 'Please complete the security check before purchasing.';
+          return;
+        }
+
+        const durationDays = Number(durationInput.value);
+        if (!Number.isFinite(durationDays) || durationDays <= 0) {
+          statusNode.textContent = 'Select a valid billing cycle and try again.';
+          return;
+        }
+
+        statusNode.textContent = 'Creating secure checkout session...';
+        submitButton.disabled = true;
+        submitButton.textContent = 'Redirecting...';
+
+        const payload = {
+          tier: 'Pro',
+          durationDays,
+          email: emailInput.value.trim(),
+          token,
+          turnstileToken: token
+        };
+
+        try {
+          const response = await fetch('https://stripe.apicourier.dev/create-checkout', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          let data = null;
+          try {
+            data = await response.json();
+          } catch {
+            data = null;
+          }
+
+          if (!response.ok) {
+            throw new Error(data?.error?.message || data?.message || 'Checkout failed. Please try again.');
+          }
+
+          const checkoutUrl = data?.url || data?.checkoutUrl;
+          if (!checkoutUrl) {
+            throw new Error('Checkout session was created but no redirect URL was returned.');
+          }
+
+          window.location.href = checkoutUrl;
+        } catch (error) {
+          const message = error instanceof Error ? error.message : 'Checkout failed. Please try again.';
+          statusNode.textContent = message;
+          submitButton.disabled = false;
+          submitButton.textContent = 'Continue Purchase';
+
+          if (window.turnstile && turnstileWidgetId !== null) {
+            try {
+              window.turnstile.reset(turnstileWidgetId);
+            } catch {
+              // Ignore reset failures and allow users to retry manually.
+            }
+          }
+        }
+      });
     }
   }
 }
