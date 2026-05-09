@@ -58,16 +58,28 @@ const roadmapSections = [
     },
     items: [
       {
-        title: 'Database Integration',
-        description: 'First-class SQL editor with support for SQL Server, PostgreSQL, MySQL, and SQLite. Connection management and IntelliSense.',
+        title: 'SQL Queries as Artifacts',
+        description: 'First-class SQL queries that compose with HTTP requests — Git-tracked YAML artifacts, mixed flows, schema drift detection, and pre/post-execute scripts. SQLite on Free; Postgres, MSSQL, and MySQL on Pro.',
         iconClass: 'bg-amber-500/10 text-amber-400',
         iconPath: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4'
       },
       {
-        title: 'Mock Server',
-        description: 'Create mock API servers from OpenAPI specs or collections for frontend development and testing.',
-        iconClass: 'bg-indigo-500/10 text-indigo-400',
+        title: 'GraphQL Gateway',
+        description: 'Smart Gateway support for GraphQL: mock by operation name, validate against your SDL, and record live traffic — same pipeline as REST.',
+        iconClass: 'bg-pink-500/10 text-pink-400',
         iconPath: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z'
+      },
+      {
+        title: 'Shadow / Conformance Mode',
+        description: 'Proxy to your real service while evaluating mocks in parallel — get a divergence report without affecting clients. Validate mocks against reality continuously.',
+        iconClass: 'bg-violet-500/10 text-violet-400',
+        iconPath: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
+      },
+      {
+        title: 'Compliance Redaction Packs',
+        description: 'Drop-in HIPAA, PCI, and GDPR redaction rule packs for gateway captures and logs. PCI pack already shipped — HIPAA and GDPR queued.',
+        iconClass: 'bg-emerald-500/10 text-emerald-400',
+        iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
       },
       {
         title: 'Linux Support',
@@ -107,16 +119,34 @@ const roadmapSections = [
         iconPath: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
       },
       {
-        title: 'Plugin/Extension System',
-        description: 'Developer SDK for building custom extensions, importers, auth providers, and integrations.',
+        title: 'Capability Marketplace',
+        description: 'Discover, install, and update third-party capabilities — scripting engines, importers, gateway actions, redaction packs — without rebuilding the app. Includes a developer SDK.',
         iconClass: 'bg-pink-500/10 text-pink-400',
         iconPath: 'M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z'
       },
       {
-        title: 'API + DB Correlation',
-        description: 'Before/after query comparison, API request to DB change visualization, and cross-layer debugging tools.',
+        title: 'API + DB Correlation Diff View',
+        description: 'Visual side-by-side diff of database state changes around an API call — rows added/changed/removed. Builds on top of the mixed HTTP+SQL flows that ship in 1.0.',
         iconClass: 'bg-violet-500/10 text-violet-400',
         iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+      },
+      {
+        title: 'JWT Signature Validation',
+        description: 'Validate inbound JWTs at the gateway against your IdP — JWKS fetch, issuer/audience/expiry checks, algorithm allow-list. Decoded claims already flow into scripts; signature verification is next.',
+        iconClass: 'bg-amber-500/10 text-amber-400',
+        iconPath: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
+      },
+      {
+        title: 'Stateful Mock Scenarios',
+        description: 'Persistent state across gateway requests for stateful mocks — rate-limit simulations, sticky-session fault injection, multi-step scenarios ("third call returns 429, recovers after 30s").',
+        iconClass: 'bg-orange-500/10 text-orange-400',
+        iconPath: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4'
+      },
+      {
+        title: 'Protocol Extensions',
+        description: 'Smart Gateway support beyond HTTP and GraphQL — WebSockets, gRPC, Server-Sent Events. Each protocol gets its own pipeline that reuses scripting, capture, redaction, and drift reporting.',
+        iconClass: 'bg-sky-500/10 text-sky-400',
+        iconPath: 'M13 10V3L4 14h7v7l9-11h-7z'
       }
     ]
   },
@@ -261,6 +291,42 @@ const roadmapSections = [
         description: 'Export requests as code snippets in C#, JavaScript, Python, and cURL for quick integration into your projects.',
         iconClass: 'bg-sky-500/10 text-sky-400',
         iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
+      },
+      {
+        title: 'Smart Gateway',
+        description: 'Local intercept gateway for mocking APIs from OpenAPI specs or canned responses. Git-versioned rules, hot-reload, full request/response logging — runs in-process via Kestrel.',
+        iconClass: 'bg-purple-500/10 text-purple-400',
+        iconPath: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01'
+      },
+      {
+        title: 'Gateway Chaos Engineering',
+        description: 'Rehearse real-world failure modes against your dev environment. Latency injection (fixed, uniform, normal, lognormal distributions), fault probability, body truncation — all declarative.',
+        iconClass: 'bg-orange-500/10 text-orange-400',
+        iconPath: 'M13 10V3L4 14h7v7l9-11h-7z'
+      },
+      {
+        title: 'Traffic Recording',
+        description: 'Capture live API traffic to HAR or YAML for replay, mock generation, and debugging. Drop a record action on any rule and inspect captures in the gateway UI.',
+        iconClass: 'bg-cyan-500/10 text-cyan-400',
+        iconPath: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'
+      },
+      {
+        title: 'Contract Drift Detection',
+        description: 'Validate proxied responses against your OpenAPI spec — catch undeclared status codes and content-type drift before they reach production. Configurable warn/fail/silent modes.',
+        iconClass: 'bg-amber-500/10 text-amber-400',
+        iconPath: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+      },
+      {
+        title: 'Gateway Scripting',
+        description: 'Pre-request and post-response scripts on every gateway rule, in JavaScript or C#. Same Worker sandbox and ac.* API as request scripts — read JWT claims, mutate headers, short-circuit responses.',
+        iconClass: 'bg-indigo-500/10 text-indigo-400',
+        iconPath: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+      },
+      {
+        title: 'Compliance Redaction Engine',
+        description: 'Built-in redaction for sensitive headers, secrets, credit cards, and emails in gateway captures and logs. Pluggable rule packs — PCI pack ships today, HIPAA and GDPR queued.',
+        iconClass: 'bg-red-500/10 text-apired',
+        iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
       }
     ]
   }

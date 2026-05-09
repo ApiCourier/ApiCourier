@@ -17,15 +17,15 @@ const indexFeatureCards = [
     ]
   },
   {
-    title: 'Test that your API actually wrote to the DB',
-    description: 'Built-in drivers for SQL Server, Postgres, MySQL, and SQLite. Assert database state after any request, and see a before/after diff of DB changes around each call.',
+    title: 'SQL queries as first-class artifacts',
+    description: 'Git-tracked, parameterized SQL that composes with HTTP requests in flows, verify the API actually wrote what it said it did. SQLite ships free; Pro adds Postgres, MSSQL, and MySQL.',
     iconClass: 'bg-amber-500/10 text-amber-400',
     iconPath: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4',
     bulletColorClass: 'bg-amber-400',
     bullets: [
-      'SQL Server, Postgres, MySQL, SQLite',
-      'Before/after query diff view',
-      'Because 200 OK doesn\u2019t mean the data saved'
+      'SQLite on Free, network engines on Pro',
+      'Mixed HTTP + SQL flows with shared variables',
+      'Schema drift detection on result sets'
     ],
     badgeText: 'Coming in 1.0',
     badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/30',
@@ -162,7 +162,7 @@ const featureComparison = {
       ]
     },
     {
-      label: 'Database assertions (SQL Server, Postgres, MySQL, SQLite)',
+      label: 'SQL queries as artifacts (SQLite Free, Postgres/MSSQL/MySQL Pro)',
       rowClass: 'bg-emerald-500/[0.04]',
       labelClass: 'font-semibold text-slate-100',
       cells: [
@@ -184,7 +184,7 @@ const featureComparison = {
       ]
     },
     {
-      label: 'API ↔ DB correlation with diff',
+      label: 'Mixed HTTP + SQL flows with schema drift',
       rowClass: 'bg-emerald-500/[0.04]',
       labelClass: 'font-semibold text-slate-100',
       cells: [
@@ -381,6 +381,7 @@ const pricingPlans = [
       { text: 'Static mocks + local echo server', icon: 'check' },
       { text: 'Basic flows (sequential, up to 10 steps)', icon: 'check' },
       { text: 'Postman, Bruno, cURL & OpenAPI import', icon: 'check' },
+      { text: '<strong>SQL queries (SQLite)</strong> - artifacts, mixed flows, scripts, schema drift <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
       { text: 'CLI with JUnit XML output for CI/CD', icon: 'check' }
     ],
     button: {
@@ -400,9 +401,9 @@ const pricingPlans = [
     features: [
       { text: '<strong>Everything in Free, plus:</strong>', icon: 'check' },
       { text: '<strong>NuGet &amp; NPM package imports</strong> in scripts', icon: 'check' },
-      { text: '<strong>Database assertions</strong> - SQL Server, Postgres, MySQL, SQLite <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
+      { text: '<strong>SQL network engines</strong> - adds Postgres, MSSQL &amp; MySQL on top of SQLite <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
       { text: '<strong>Smart Mock Gateway</strong> - hybrid proxy/mock routing <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
-      { text: 'API ↔ DB correlation with before/after diff <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
+      { text: 'Mixed HTTP + SQL flows with shared variables &amp; schema drift detection <span class="ml-1 rounded bg-amber-500/15 text-amber-300 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 align-middle">1.0</span>', icon: 'check' },
       { text: 'Schema registry (JSON schemas reusable across requests)', icon: 'check' },
       { text: 'Advanced flows - branching, retry, scheduling, CSV/JSON runs', icon: 'check' },
       { text: 'Visual Git UI - diff, stage, commit, branch management', icon: 'check' },
@@ -476,7 +477,7 @@ const faqItems = [
   },
   {
     question: 'What\u2019s shipping in v1.0?',
-    answer: 'The 1.0 badges mark features in the v1.0 release - database assertions (SQL Server, Postgres, MySQL, SQLite), the Smart Mock Gateway with hybrid proxy/mock routing, API ↔ DB correlation with before/after diffs, and NuGet/NPM imports for Pro scripts. Insiders get these as builds roll out ahead of general availability.'
+    answer: 'The 1.0 badges mark features in the v1.0 release - first-class SQL queries (SQLite on Free; Postgres, MSSQL, and MySQL on Pro), mixed HTTP+SQL flows with schema drift detection, the Smart Mock Gateway with hybrid proxy/mock routing, and NuGet/NPM imports for Pro scripts. Insiders get these as builds roll out ahead of general availability.'
   },
   {
     question: 'What if I stop paying?',
