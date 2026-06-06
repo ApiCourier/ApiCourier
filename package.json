@@ -1,0 +1,11 @@
+{
+  "name": "apicourier-site-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build step for the ApiCourier marketing site: bakes shared header/footer into each page for SEO, output to dist/ (published by Cloudflare Pages).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && node src/serve.js dist",
+    "dev": "node src/serve.js src"
+  }
+}

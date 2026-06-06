@@ -3,13 +3,17 @@ const fs = require('fs');
 const path = require('path');
 
 const port = process.env.PORT || 8080;
-const root = __dirname;
+// Serve src/ by default (client-rendered dev). Pass a directory to serve the
+// baked build instead, e.g. `node src/serve.js dist` to preview what Cloudflare
+// publishes.
+const root = process.argv[2] ? path.resolve(process.argv[2]) : __dirname;
 const workerBaseUrl = (process.env.APICOURIER_WORKER_BASE_URL || '').trim();
 
 const contentTypes = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
+  '.mjs': 'application/javascript; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.png': 'image/png'
 };

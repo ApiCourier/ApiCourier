@@ -4,3 +4,7 @@
 *.swo
 Thumbs.db
 *.env
+
+# Build output + tooling
+/dist/
+node_modules/
